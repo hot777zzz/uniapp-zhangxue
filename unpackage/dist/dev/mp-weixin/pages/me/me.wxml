@@ -1,0 +1,1 @@
+<view><block wx:if="{{userInfo.phone}}"><view>{{"用户："+userInfo.phone}}</view></block><block wx:else><button data-event-opts="{{[['tap',[['goLogin',['$event']]]]]}}" bindtap="__e">去登陆</button></block></view>
