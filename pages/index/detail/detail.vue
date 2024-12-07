@@ -63,6 +63,16 @@
 				</view>
 			</view>
 		</view>
+
+		<!-- 添加悬浮按钮组 -->
+		<view class="float-buttons">
+			<button class="float-btn test-drive" @tap="handleTestDrive">
+				<text class="btn-text">预约试驾</text>
+			</button>
+			<button class="float-btn order-now" @tap="handleOrder">
+				<text class="btn-text">立即订购</text>
+			</button>
+		</view>
 	</view>
 </template>
 
@@ -109,6 +119,36 @@ export default {
 		},
 		handleColorChange(color) {
 			this.currentColor = color.id
+		},
+		handleTestDrive() {
+			// 跳转到预约试驾页面，并传递当前车型信息
+			uni.navigateTo({
+				url: `./testDrive/testDrive?modelName=${this.currentModelData.name}`
+			})
+		},
+		handleOrder() {
+			// 处理预约订购逻辑
+			const userInfo = uni.getStorageSync('userInfo')
+			if(!userInfo){
+				uni.showModal({
+					title: '提示',
+					content: '请先登录或注册后继续操作',
+					confirmText: '去登录',
+					cancelText: '取消',
+					success: (res) => {
+						if (res.confirm) {
+							uni.navigateTo({
+								url: '/pages/login/login'
+							})
+						}
+					}
+				})
+			}
+			else{
+				uni.navigateTo({
+					url:'/pages/index/detail/order/order'
+				})
+			}
 		}
 	}
 }
@@ -120,6 +160,8 @@ export default {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: calc(120rpx + constant(safe-area-inset-bottom));
+	padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
 }
 
 .swiper {
@@ -254,17 +296,43 @@ export default {
 	font-weight: 500;
 }
 
-/* 适配 iPhone 底部安全区域 */
-/* #ifdef H5 */
-@supports (bottom: constant(safe-area-inset-bottom)) {
-	.detail {
-		padding-bottom: constant(safe-area-inset-bottom);
-	}
+/* 添加悬浮按钮样式 */
+.float-buttons {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	padding: 20rpx 30rpx;
+	background-color: #ffffff;
+	box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.1);
+	/* 适配iPhone底部安全区域 */
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
 }
-@supports (bottom: env(safe-area-inset-bottom)) {
-	.detail {
-		padding-bottom: env(safe-area-inset-bottom);
-	}
+
+.float-btn {
+	flex: 1;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	border-radius: 40rpx;
+	margin: 0 10rpx;
+	border: none;
 }
-/* #endif */
+
+.test-drive {
+	background-color: #f8f8f8;
+	color: #007AFF;
+}
+
+.order-now {
+	background-color: #007AFF;
+	color: #ffffff;
+}
+
+.btn-text {
+	font-size: 28rpx;
+	font-weight: 500;
+}
 </style>

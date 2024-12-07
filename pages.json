@@ -54,6 +54,27 @@
 			{
 				"navigationBarTitleText" : "注册"
 			}
+		},
+		{
+			"path" : "pages/index/detail/testDrive/testDrive",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预约试驾"
+			}
+		},
+		{
+			"path" : "pages/me/completeProfile/completeProfile",
+			"style" : 
+			{
+				"navigationBarTitleText" : "完善资料"
+			}
+		},
+		{
+			"path" : "pages/index/detail/order/order",
+			"style" : 
+			{
+				"navigationBarTitleText" : "立即购车"
+			}
 		}
 	],
 	"globalStyle": {

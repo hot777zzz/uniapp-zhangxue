@@ -7,7 +7,10 @@
     "pages/index/detail/detail",
     "pages/index/learnMore/learnMore",
     "pages/login/login",
-    "pages/login/register/register"
+    "pages/login/register/register",
+    "pages/index/detail/testDrive/testDrive",
+    "pages/me/completeProfile/completeProfile",
+    "pages/index/detail/order/order"
   ],
   "subPackages": [],
   "window": {
