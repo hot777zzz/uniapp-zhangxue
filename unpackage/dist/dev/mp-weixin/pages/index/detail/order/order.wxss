@@ -1,0 +1,191 @@
+
+.order-container {
+	padding-bottom: 120rpx;
+}
+.product-section {
+	padding: 30rpx;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+}
+.product-image {
+	width: 200rpx;
+	height: 200rpx;
+	margin-right: 20rpx;
+}
+.product-info {
+	flex: 1;
+}
+.product-name {
+	font-size: 32rpx;
+	font-weight: bold;
+	margin-bottom: 10rpx;
+}
+.product-price {
+	color: #ff4d4f;
+	font-size: 36rpx;
+	font-weight: bold;
+}
+.section-card {
+	margin: 20rpx;
+	padding: 20rpx;
+	background-color: #ffffff;
+	border-radius: 12rpx;
+}
+.section-title {
+	font-size: 28rpx;
+	font-weight: bold;
+	margin-bottom: 20rpx;
+}
+.color-list {
+	white-space: nowrap;
+}
+.color-items {
+	display: inline-flex;
+	padding: 10rpx;
+}
+.color-item {
+	margin-right: 20rpx;
+	text-align: center;
+	padding: 10rpx;
+	border: 2rpx solid transparent;
+	border-radius: 8rpx;
+}
+.color-item.active {
+	border-color: #007AFF;
+}
+.color-image {
+	width: 120rpx;
+	height: 120rpx;
+}
+.color-name {
+	font-size: 24rpx;
+	margin-top: 10rpx;
+}
+.config-list {
+	display: flex;
+	flex-direction: column;
+}
+.config-item {
+	display: flex;
+	align-items: center;
+	padding: 20rpx 0;
+}
+.config-info {
+	margin-left: 20rpx;
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+.config-name {
+	font-size: 28rpx;
+}
+.config-price {
+	color: #ff4d4f;
+	font-size: 28rpx;
+}
+.deposit-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10rpx;
+}
+.deposit-label {
+	font-size: 28rpx;
+}
+.deposit-amount {
+	color: #ff4d4f;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.deposit-tip {
+	font-size: 24rpx;
+	color: #999;
+}
+.form-item {
+	margin-bottom: 30rpx;
+}
+.label {
+	display: block;
+	font-size: 28rpx;
+	color: #333;
+	margin-bottom: 10rpx;
+}
+.required::before {
+	content: '*';
+	color: #ff4d4f;
+	margin-right: 4rpx;
+}
+.input {
+	width: 100%;
+	height: 80rpx;
+	background-color: #f8f8f8;
+	border-radius: 8rpx;
+	padding: 0 20rpx;
+	font-size: 28rpx;
+}
+.picker {
+	width: 100%;
+	height: 80rpx;
+	background-color: #f8f8f8;
+	border-radius: 8rpx;
+}
+.picker-value {
+	height: 80rpx;
+	line-height: 80rpx;
+	padding: 0 20rpx;
+	font-size: 28rpx;
+}
+.notice-section {
+	padding: 30rpx;
+}
+.agreement {
+	display: flex;
+	align-items: center;
+}
+.agreement-text {
+	font-size: 26rpx;
+	color: #666;
+	margin-left: 10rpx;
+}
+.agreement-link {
+	font-size: 26rpx;
+	color: #007AFF;
+}
+.submit-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100rpx;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	padding: 0 30rpx;
+	box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.05);
+}
+.price-info {
+	flex: 1;
+}
+.deposit-text {
+	font-size: 28rpx;
+	color: #666;
+}
+.deposit-value {
+	font-size: 36rpx;
+	color: #ff4d4f;
+	font-weight: bold;
+}
+.submit-btn {
+	width: 240rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	background-color: #007AFF;
+	color: #ffffff;
+	font-size: 28rpx;
+	border-radius: 40rpx;
+}
+.submit-btn[disabled] {
+	opacity: 0.6;
+}
+

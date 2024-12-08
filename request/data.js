@@ -27,7 +27,7 @@ const mapData = {
                                                 //   title:'我在这里',//标注点名
                                             alpha:0.5,   //透明度
                                             callout:{//自定义标记点上方的气泡窗口 点击有效  
-                                            content:'xx大厦',//文本
+                                            content:'成都1号店',//文本
                                             color:'#ffffff',//文字颜色
                                             fontSize:14,//文本大小
                                             borderRadius:15,//边框圆角
@@ -38,8 +38,8 @@ const mapData = {
                                             },
                                             {
 											id:1234597,
-                                                    latitude:  23.106574,//纬度
-                                                    longitude: 113.324587,//经度
+                                            latitude:30.64, //纬度
+                                           longitude:104.0734,//经度
                                                     iconPath: '',    //显示的图标        
                                                     rotate:0,   // 旋转度数
                                                     width:20,   //宽
@@ -50,7 +50,7 @@ const mapData = {
                                                 //   color:'red',//文本颜色
                                                 //      },
                                                     callout:{//自定义标记点上方的气泡窗口 点击有效  
-                                                content:'广州塔',//文本
+                                                content:'成都2号店',//文本
                                                 color:'#ffffff',//文字颜色
                                                 fontSize:14,//文本大小
                                                 borderRadius:15,//边框圆角
@@ -61,15 +61,15 @@ const mapData = {
                                             },
                                             {
                                                     id:2,
-                                                    latitude:  23.1338,//纬度
-                                                    longitude: 113.33052,//经度
+                                                    latitude:30.71, //纬度
+                                                    longitude:104.07,//经度
                                                     iconPath: '',    //显示的图标        
                                                     rotate:0,   // 旋转度数
                                                   width:20,   //宽
                                                     height:30,   //高
                                                     alpha:0.5,   //透明度
                                             callout:{//自定义标记点上方的气泡窗口 点击有效  
-                                                content:'德隆大厦',//文本
+                                                content:'成都3号店',//文本
                                                 color:'#ffffff',//文字颜色
                                                 fontSize:14,//文本大小
                                                 borderRadius:15,//边框圆角
@@ -143,7 +143,61 @@ const motorcycleData = {
         ]
     },
     2: {
-        // 可以添加其他型号的数据
+        swiper: [
+            { url: '/static/motorcycle/sport-1.png' },
+            { url: '/static/motorcycle/sport-2.png' },
+            { url: '/static/motorcycle/sport-3.png' }
+        ],
+        models: [
+            {
+                id: '1',
+                name: '普通版',
+                image: '/static/motorcycle/sport.png',
+                colors: [
+                    {
+                        id: '1-1',
+                        name: '极地白',
+                        image: '/static/motorcycle/sport-black.png'
+                    },
+                    {
+                        id: '1-2',
+                        name: '背叛绿',
+                        image: '/static/motorcycle/sport-red.png'
+                    }
+                ],
+                params: {
+                    engine: '1000cc',
+                    power: '180hp',
+                    torque: '120N·m',
+                    weight: '198kg',
+                    price: '139,800'
+                }
+            },
+            {
+                id: '2',
+                name: '赛道版',
+                image: '/static/motorcycle/sport-race.png',
+                colors: [
+                    {
+                        id: '2-1',
+                        name: '赛道黄',
+                        image: '/static/motorcycle/sport-race-yellow.png'
+                    },
+                    {
+                        id: '2-2',
+                        name: '竞技蓝',
+                        image: '/static/motorcycle/sport-race-blue.png'
+                    }
+                ],
+                params: {
+                    engine: '1000cc',
+                    power: '200hp',
+                    torque: '130N·m',
+                    weight: '195kg',
+                    price: '159,800'
+                }
+            }
+        ]
     }
 }
 

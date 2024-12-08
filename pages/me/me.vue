@@ -18,15 +18,15 @@
 		<view class="order-section section-card">
 			<view class="section-title">我的订单</view>
 			<view class="order-grid">
-				<view class="order-item" @tap="navigateTo('/pages/me/orders/motorcycle')">
+				<view class="order-item" @tap="navigateTo('/pages/me/orders/motorcycle.vue')">
 					<image class="order-icon" src="/static/images/motorcycle.png"></image>
 					<text>购车订单</text>
 				</view>
-				<view class="order-item" @tap="navigateTo('/pages/me/orders/testDrive')">
+				<view class="order-item" @tap="navigateTo('/pages/index/detail/testDrive/testDrive')">
 					<image class="order-icon" src="/static/images/test-drive.png"></image>
 					<text>试驾预约</text>
 				</view>
-				<view class="order-item" @tap="navigateTo('/pages/me/orders/maintenance')">
+				<view class="order-item" @tap="navigateTo('/pages/me/orders/maintenance.vue')">
 					<image class="order-icon" src="/static/images/maintenance.png"></image>
 					<text>维修保养</text>
 				</view>
